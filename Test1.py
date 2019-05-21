@@ -1,4 +1,3 @@
-
 #TestClass
 #定语一个Person人类
 class Person:
