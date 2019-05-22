@@ -1,22 +1,22 @@
-#TestClass
-#定语一个Person人类
-class Person:
-	#定义属性
-	name='张三'
-	age=20
-	id='50023419991245678X'
-	#定义方法
-	def fun1(self):
-		print('姓名:%s\n年龄:%d\n身份证:%s\n' %(self.name,self.age,self.id))
-#定义Student
-class Student(Person):
-	#定义属性
-	number=100
-	#定义方法
-	def fun1(self):
-	#super().  调用父类
-		super().fun1()
-		print('用户学号:%d' %self.number)
+#定义一个学生类
+class student():
+#定义属性
+    def __init__(self,name,age,scores):
+        self.name=name
+        self.age=age
+        self.scores=scores
+#定义姓名方法
+    def get_name(self):
+        print('姓名:',self.name)
+#定义年龄方法
+    def get_age(self):
+        print('年龄:',self.age)
+#定义成绩方法
+    def get_scores(self):
+        print('最高分数:',max(self.scores))
 #实例化对象
-new=Student()
-new.fun1()
+zm= student('zhangming',20,[69,88,100])
+#调用对象
+zm.get_name()
+zm.get_age()
+zm.get_scores()
