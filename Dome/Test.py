@@ -1,22 +1,17 @@
-#定义一个学生类
-class student():
-#定义属性
-    def __init__(self,name,age,scores):
-        self.name=name
-        self.age=age
-        self.scores=scores
-#定义姓名方法
-    def get_name(self):
-        print('姓名:',self.name)
-#定义年龄方法
-    def get_age(self):
-        print('年龄:',self.age)
-#定义成绩方法
-    def get_scores(self):
-        print('最高分数:',max(self.scores))
-#实例化对象
-zm= student('zhangming',20,[69,88,100])
-#调用对象
-zm.get_name()
-zm.get_age()
-zm.get_scores()
+import random
+number = random.randint(1,100)
+print('------猜数字游戏！-----')
+guess = 0
+sum=0
+while guess != number:
+    temp = input('请输入数字：\n')
+    guess = int(temp)
+    if guess > number:
+        print('您输入的数字大了！')
+    elif guess < number:
+        print('您输入的数字小了！')
+    else :
+        print('恭喜，您猜对了！')
+        print('游戏结束，再见！^_^')
+    sum=sum+1
+print(sum)
